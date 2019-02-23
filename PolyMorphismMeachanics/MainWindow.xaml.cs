@@ -48,7 +48,7 @@ namespace PolyMorphismMeachanics
         {
             double total = 0;
             int count = 0;
-            foreach(Shape s in shapes)
+            foreach (Shape s in shapes)
             {
                 TextBlock newtb = new TextBlock();
                 newtb.Text = s.GetArea().ToString();
@@ -57,6 +57,20 @@ namespace PolyMorphismMeachanics
                 total += s.GetArea();
                 txbTotal.Text = string.Format("Total: {0}", total.ToString("n2"));
             }
+        }
+
+        private void BtnSum_Click(object sender, RoutedEventArgs e)
+        {
+            IVolume[] volumes = new IVolume[4];            volumes[0] = new Cylinder(10, 45, 5, 15);
+            volumes[1] = new Block(13, 16, 12, 5, 15);
+            volumes[2] = new Cylinder(10, 45, 5, 15);
+            volumes[3] = new Block(24, 72, 3, 5, 15);
+            double sumTotal = 0;
+            foreach (IVolume vol in volumes)
+            {
+                sumTotal += vol.GetVolume();
+            }
+            txbInterTotal.Text = string.Format("Total: {0}", sumTotal.ToString("n5"));
         }
     }
 }

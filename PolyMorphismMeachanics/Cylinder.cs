@@ -20,7 +20,7 @@ namespace PolyMorphismMeachanics
 
         public double GetVolume()
         {
-            return Height * Math.PI * (Radius ^ 2);
+            return Height * Math.PI * Radius*Radius;
         }
 
         public Cylinder(int radius, int height, int top, int left) : base(radius, top, left)

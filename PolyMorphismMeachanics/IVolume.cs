@@ -8,5 +8,6 @@ namespace PolyMorphismMeachanics
 {
     interface IVolume
     {
+        double GetVolume();
     }
 }
