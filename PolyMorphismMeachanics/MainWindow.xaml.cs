@@ -20,12 +20,12 @@ namespace PolyMorphismMeachanics
     /// </summary>
     public partial class MainWindow : Window
     {
-        Shape[] shapes = new Shape[10];
+        Shape[] _Shapes = new Shape[10];
 
         public MainWindow()
         {
             InitializeComponent();
-            shapes = FillArray();
+            _Shapes = FillArray();
         }
 
         public Shape[] FillArray()
@@ -48,7 +48,7 @@ namespace PolyMorphismMeachanics
         {
             double total = 0;
             int count = 0;
-            foreach (Shape s in shapes)
+            foreach (Shape s in _Shapes)
             {
                 TextBlock newtb = new TextBlock();
                 newtb.Text = s.GetArea().ToString();
@@ -71,6 +71,50 @@ namespace PolyMorphismMeachanics
                 sumTotal += vol.GetVolume();
             }
             txbInterTotal.Text = string.Format("Total: {0}", sumTotal.ToString("n5"));
+        }
+
+        private void BtnGetShapes_Click(object sender, RoutedEventArgs e)
+        {
+            int cirCount = 0, rectCount = 0, triCount = 0,cylCount = 0, blkCount = 0;
+            foreach (Shape sh in _Shapes)
+            {
+                TextBlock tb = new TextBlock();
+                if (sh.GetType() == typeof(Circle))
+                {
+                    cirCount++;
+                    tb.Text = "Circle";
+                }
+                else if (sh.GetType() == typeof(Rectangle))
+                {
+                    rectCount++;
+                    tb.Text = "Rectangle";
+                }
+                else if (sh.GetType() == typeof(Triangle))
+                {
+                    triCount++;
+                    tb.Text = "Triangle";
+                }
+                else if (sh.GetType() == typeof(Cylinder))
+                {
+                    cylCount++;
+                    tb.Text = "Cylinder";
+                }
+                else if (sh.GetType() == typeof(Block))
+                {
+                    blkCount++;
+                    tb.Text = "Block";
+                }
+                else
+                {
+                    tb.Text = "Unknown Shape";
+                }
+                stkShapesList.Children.Add(tb);
+            }
+            txbBlock.Text += blkCount.ToString();
+            txbCircle.Text += cirCount.ToString();
+            txbCylinder.Text += cylCount.ToString();
+            txbRectangle.Text += rectCount.ToString();
+            txbTriangle.Text += triCount.ToString();
         }
     }
 }

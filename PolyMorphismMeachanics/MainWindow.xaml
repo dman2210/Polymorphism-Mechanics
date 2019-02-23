@@ -7,11 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnShow" Content="Show Areas" HorizontalAlignment="Left" Margin="49,50,0,0" VerticalAlignment="Top" Width="73" Click="BtnShow_Click"/>
-        <TextBlock Text="Total: " x:Name="txbTotal" HorizontalAlignment="Left" Margin="183,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <StackPanel x:Name="stkAreas" HorizontalAlignment="Left" Height="267" Margin="183,50,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="btnSum" Content="Sum Interfaces" HorizontalAlignment="Left" Margin="521,155,0,0" VerticalAlignment="Top" Width="99" Height="34" Click="BtnSum_Click"/>
-        <TextBlock x:Name="txbInterTotal" HorizontalAlignment="Left" Margin="638,164,0,0" TextWrapping="Wrap" Text="Total: " VerticalAlignment="Top"/>
+        <Button x:Name="btnShow" Content="Show Areas" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="73" Click="BtnShow_Click"/>
+        <TextBlock Text="Total: " x:Name="txbTotal" HorizontalAlignment="Left" Margin="88,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <StackPanel x:Name="stkAreas" HorizontalAlignment="Left" Height="267" Margin="88,50,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnSum" Content="Sum Interfaces" HorizontalAlignment="Left" Margin="193,43,0,0" VerticalAlignment="Top" Width="99" Height="34" Click="BtnSum_Click"/>
+        <TextBlock x:Name="txbInterTotal" HorizontalAlignment="Left" Margin="297,52,0,0" TextWrapping="Wrap" Text="Total: " VerticalAlignment="Top"/>
+        <Button Content="Get Shapes" x:Name="btnGetShapes" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="435,50,0,0" Click="BtnGetShapes_Click"/>
+        <StackPanel x:Name="stkShapesList" HorizontalAlignment="Left" Height="235" Margin="515,52,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock x:Name="txbCircle" HorizontalAlignment="Left" Margin="685,57,0,0" TextWrapping="Wrap" Text="Circles: " VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbRectangle" HorizontalAlignment="Left" Margin="685,80,0,0" TextWrapping="Wrap" Text="Rectangles: " VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbTriangle" HorizontalAlignment="Left" Margin="685,101,0,0" TextWrapping="Wrap" Text="Triangles: " VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbCylinder" HorizontalAlignment="Left" Margin="685,122,0,0" TextWrapping="Wrap" Text="Cylinders: " VerticalAlignment="Top"/>
+        <TextBlock x:Name="txbBlock" HorizontalAlignment="Left" Margin="685,143,0,0" TextWrapping="Wrap" Text="Blocks: " VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
