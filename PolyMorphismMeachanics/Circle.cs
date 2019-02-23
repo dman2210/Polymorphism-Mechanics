@@ -30,7 +30,7 @@ namespace PolyMorphismMeachanics
 
         public override double GetArea()
         {
-            return Math.PI*(Radius^2);
+            return Math.PI*Radius*Radius;
         }
 
         public Circle(int radius, int top, int left):base(top, left)

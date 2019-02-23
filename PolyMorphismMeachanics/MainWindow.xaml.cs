@@ -20,7 +20,8 @@ namespace PolyMorphismMeachanics
     /// </summary>
     public partial class MainWindow : Window
     {
-        Shape[] shapes = new Shape[10];
+        Shape[] shapes = new Shape[10];
+
         public MainWindow()
         {
             InitializeComponent();
