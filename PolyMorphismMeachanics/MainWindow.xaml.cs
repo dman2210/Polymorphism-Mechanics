@@ -116,5 +116,24 @@ namespace PolyMorphismMeachanics
             txbRectangle.Text += rectCount.ToString();
             txbTriangle.Text += triCount.ToString();
         }
+
+        private void BtnCombine_Click(object sender, RoutedEventArgs e)
+        {
+            Rectangle rect1, rect2, rect3;
+            rect1 = (Rectangle)_Shapes[2];
+            rect2 = (Rectangle)_Shapes[4];
+            rect3 = rect1 + rect2;
+            txbStats.Text = string.Format("Top: {0}\r\nLeft: {1}\r\nHeight: {2}\r\nWidth: {3}", rect3.Top, rect3.Left, rect3.Height, rect3.Width);
+        }
+
+        private void BtnCombineOp_Click(object sender, RoutedEventArgs e)
+        {
+            Circle cir = null;
+            Triangle tri = null;
+            if (chkTriangle.IsChecked == true) tri = new Triangle();
+            if (chkCircle.IsChecked == true) cir = new Circle();            if (chkCircle.IsChecked == true) cir = new Circle();
+
+            txbAnswer.Text = cir + tri;
+        }
     }
 }

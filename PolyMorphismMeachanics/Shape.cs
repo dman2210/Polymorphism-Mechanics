@@ -39,6 +39,7 @@ namespace PolyMorphismMeachanics
             Top = top;
             Left = left;
         }
+        public Shape() { }
     }
 
 }

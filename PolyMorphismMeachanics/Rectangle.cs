@@ -51,6 +51,12 @@ namespace PolyMorphismMeachanics
             Width = width;
             Height = height;
         }
+
+        public static Rectangle operator +(Rectangle r1, Rectangle r2)
+        {
+            Rectangle newRect = new Rectangle(r1.Width + r2.Width, r1.Height + r2.Height, r1.Top, r1.Left);
+            return newRect;
+        }
     }
 
 }

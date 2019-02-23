@@ -45,6 +45,7 @@ namespace PolyMorphismMeachanics
         {
             return (Base * 1 / 2 * Height);
         }
+        public Triangle() { }
 
         public Triangle(int daBase,int height, int top, int left ):base(top, left)
         {

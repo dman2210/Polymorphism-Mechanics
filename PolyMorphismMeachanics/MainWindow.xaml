@@ -19,6 +19,20 @@
         <TextBlock x:Name="txbTriangle" HorizontalAlignment="Left" Margin="685,101,0,0" TextWrapping="Wrap" Text="Triangles: " VerticalAlignment="Top"/>
         <TextBlock x:Name="txbCylinder" HorizontalAlignment="Left" Margin="685,122,0,0" TextWrapping="Wrap" Text="Cylinders: " VerticalAlignment="Top"/>
         <TextBlock x:Name="txbBlock" HorizontalAlignment="Left" Margin="685,143,0,0" TextWrapping="Wrap" Text="Blocks: " VerticalAlignment="Top"/>
+        <Button x:Name="btnCombine" Content="Combine Shapes" HorizontalAlignment="Left" Margin="193,174,0,0" VerticalAlignment="Top" Width="99" Height="23" Click="BtnCombine_Click"/>
+        <TextBlock x:Name="txbStats" HorizontalAlignment="Left" Margin="297,178,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <GroupBox Header="Combining a Circle and Triangle" HorizontalAlignment="Left" Height="100" Margin="435,183,0,0" VerticalAlignment="Top" Width="200">
+            <Grid HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="190" Margin="0,-10,-2,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <CheckBox x:Name="chkCircle" Margin="0,20,0,0" Content="Circle"/>
+                <CheckBox x:Name="chkTriangle" Margin="100,20,0,0" Content="Triangle"/>
+                <Button x:Name="btnCombineOp" Width="80" HorizontalAlignment="Left" Grid.Row="1" Content="Combine" Click="BtnCombineOp_Click" />
+                <TextBlock x:Name="txbAnswer" Grid.Row="1" Margin="90,0,0,0"  Text="Answer: "/>
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Window>
